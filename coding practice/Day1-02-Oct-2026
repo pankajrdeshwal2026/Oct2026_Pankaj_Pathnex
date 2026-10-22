@@ -11,8 +11,8 @@ sudo apt install git -y
 
 
 🟩 STEP 2 — Configure Git (Only once)
-git config --global user.name "Your Name"
-git config --global user.email "your@email.com"
+git config --global user.name "pankaj"
+git config --global user.email "pankajrdeshwal2026@gmail.com"
 
 
 🟩 STEP 3 — Authenticate to GitHub (Two Options)
@@ -20,7 +20,7 @@ You have two ways to authenticate:
 🔹 OPTION A (Recommended): SSH Key Method
 
 1. Generate SSH key on EC2:
-ssh-keygen -t ed25519 -C "your@email.com"
+ssh-keygen -t ed25519 -C "pankajrdeshwal2026@gmail.com"
 Press Enter for all prompts.
 Your key will be stored here:
 ~/.ssh/id_ed25519
