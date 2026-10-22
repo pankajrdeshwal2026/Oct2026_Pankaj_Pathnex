@@ -1,0 +1,27 @@
+# git practice 
+git --version
+git config --global user.name "Pankaj"
+git config --global user.email "pankajrdeshwal2026@gmail.com"
+git config --list
+
+git init
+git clone https://github.com/pankajrdeshwal2026/Oct2026_Pankaj_Pathnex.git/
+git status
+git add app.py
+git add .
+git commit -m "Add sample code"
+git log --oneline
+
+git branch
+git branch feature/login
+git switch main
+git switch -c feature/new-feature
+git merge feature/new-feature
+git branch -d feature/new-feature
+
+git remote -v
+git remote add origin [https://github.com/pankajrdeshwal2026/Oct2026_Pankaj_Pathnex.git/)
+git push -u origin main
+git push
+git pull origin main
+git fetch origin
