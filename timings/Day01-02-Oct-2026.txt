@@ -3,3 +3,5 @@
 2. daily evening class
 3. daily coding practice
 4. daily revision
+5. batch started from november
+6. completed ansible and monitoring 
