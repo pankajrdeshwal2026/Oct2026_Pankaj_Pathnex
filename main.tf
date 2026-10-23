@@ -13,22 +13,8 @@ provider "aws" {
 
 data "aws_caller_identity" "current" {}
 
-output "aws_account_id" {
+ {
   value = data.aws_caller_identity.current.account_id
-}
-
-
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 6.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = "ap-southeast-2"
 }
 
 # Get the latest Amazon Linux 2023 AMI
@@ -37,7 +23,7 @@ data "aws_ssm_parameter" "amazon_linux" {
 }
 
 # Get the current AWS account ID
-data "aws_caller_identity" "current" {}
+#data "aws_caller_identity" "current" {}
 
 # 1. Create VPC
 resource "aws_vpc" "pankajvpc" {
@@ -69,7 +55,7 @@ resource "aws_internet_gateway" "pankaj_igw" {
   tags = {
     Name = "pankaj-igw"
   }
-}
+}output "aws_account_id"
 
 # 4. Create public route table
 resource "aws_route_table" "pankaj_public_rt" {
@@ -131,9 +117,9 @@ resource "aws_instance" "pankaj_ec2" {
 }
 
 # 8. Outputs
-output "aws_account_id" {
-  value = data.aws_caller_identity.current.account_id
-}
+#output "aws_account_id" {
+#  value = data.aws_caller_identity.current.account_id
+#}
 
 output "vpc_id" {
   value = aws_vpc.pankajvpc.id
